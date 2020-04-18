@@ -118,7 +118,7 @@
 
 
 
-  <meta name="keywords" content="git,GitHub," />
+  <meta name="keywords" content="TensorFlow," />
 
 
 
@@ -129,36 +129,35 @@
 
 
 
-<meta name="description" content="1.1 Git介绍1.1.1 Git 简介Linus的第二个伟大作品。2005年由于BitKeeper软件公司对Linux社区停止了免费使用权。Linus迫不得已自己开发了一个分布式的的版本控制工具，从而Git就诞生了。目前使用Git作为版本控制的开源软件：Linux kernel、Android、jQuery、Ruby on Rails…Eclipse 上使用Git的项目数量已经超过了使用SVN">
+<meta name="description" content="首先需要明确损失函数与代价函数的区别与联系。在 Coursera：Neural Networks and Deep Learning 课程中，Andrew Ng 给出的解释如下： The loss function computes the error for a single training example; the cost function is the average of the lo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《Git与Github使用笔记》第1章 Git入门">
-<meta property="og:url" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:title" content="《人工智能-TensorFlow开发笔记》第6章 损失函数与代价函数">
+<meta property="og:url" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="BruceOu的博客">
-<meta property="og:description" content="1.1 Git介绍1.1.1 Git 简介Linus的第二个伟大作品。2005年由于BitKeeper软件公司对Linux社区停止了免费使用权。Linus迫不得已自己开发了一个分布式的的版本控制工具，从而Git就诞生了。目前使用Git作为版本控制的开源软件：Linux kernel、Android、jQuery、Ruby on Rails…Eclipse 上使用Git的项目数量已经超过了使用SVN">
+<meta property="og:description" content="首先需要明确损失函数与代价函数的区别与联系。在 Coursera：Neural Networks and Deep Learning 课程中，Andrew Ng 给出的解释如下： The loss function computes the error for a single training example; the cost function is the average of the lo">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE1.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE2.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE3.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE4.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE5.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE6.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE7.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE8.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE9.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE10.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE11.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE12.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE13.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE14.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE15.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE16.png">
-<meta property="article:published_time" content="2020-04-18T05:37:07.346Z">
-<meta property="article:modified_time" content="2018-12-18T05:53:32.417Z">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/t1.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt1.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt2.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt3.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt4.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt5.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt6.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt7.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt8.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt9.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt10.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt11.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt12.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt13.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/t2.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/tt14.png">
+<meta property="article:published_time" content="2020-04-18T05:49:02.993Z">
+<meta property="article:modified_time" content="2018-12-18T07:42:34.869Z">
 <meta property="article:author" content="BruceOu">
-<meta property="article:tag" content="git">
-<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="TensorFlow">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/%E5%9B%BE1.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/t1.png">
 
 
 
@@ -188,13 +187,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/04/18/Git/第1章 Git入门/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/04/18/第6章 损失函数与代价函数/"/>
 
 
 
 
 
-  <title>《Git与Github使用笔记》第1章 Git入门 | BruceOu的博客</title>
+  <title>《人工智能-TensorFlow开发笔记》第6章 损失函数与代价函数 | BruceOu的博客</title>
   
 
 
@@ -365,7 +364,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/18/Git/%E7%AC%AC1%E7%AB%A0%20Git%E5%85%A5%E9%97%A8/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/18/%E7%AC%AC6%E7%AB%A0%20%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="BruceOu">
@@ -382,7 +381,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《Git与Github使用笔记》第1章 Git入门</h1>
+          <h1 class="post-title" itemprop="name headline">《人工智能-TensorFlow开发笔记》第6章 损失函数与代价函数</h1>
         
 
         <div class="post-meta">
@@ -394,7 +393,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-18T13:37:07+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-18T13:49:02+08:00">
                 2020-04-18
               </time>
             
@@ -417,8 +416,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git-GitHub/" itemprop="url" rel="index">
-                    <span itemprop="name">git&GitHub</span>
+                  <a href="/categories/TensorFlow/" itemprop="url" rel="index">
+                    <span itemprop="name">TensorFlow</span>
                   </a>
                 </span>
 
@@ -459,73 +458,70 @@
       
 
       
-        <h2 id="1-1-Git介绍"><a href="#1-1-Git介绍" class="headerlink" title="1.1 Git介绍"></a>1.1 Git介绍</h2><h3 id="1-1-1-Git-简介"><a href="#1-1-1-Git-简介" class="headerlink" title="1.1.1 Git 简介"></a>1.1.1 Git 简介</h3><p>Linus的第二个伟大作品。2005年由于BitKeeper软件公司对Linux社区停止了免费使用权。Linus迫不得已自己开发了一个分布式的的版本控制工具，从而Git就诞生了。<br>目前使用Git作为版本控制的开源软件：Linux kernel、Android、jQuery、Ruby on Rails…<br>Eclipse 上使用Git的项目数量已经超过了使用SVN的仓库数。</p>
-<h3 id="1-1-2-Git的优势"><a href="#1-1-2-Git的优势" class="headerlink" title="1.1.2 Git的优势"></a>1.1.2 Git的优势</h3><p>    分布式、离线操作<br>    每日工作备份<br>    异地协同工作<br>    现场版本控制<br>    避免引入辅助目录<br>    工作进度随时保存<br>    快</p>
-<h3 id="1-1-3-Git的工作模型"><a href="#1-1-3-Git的工作模型" class="headerlink" title="1.1.3 Git的工作模型"></a>1.1.3 Git的工作模型</h3><p>    集中式协同的模型</p>
-<p><img src="第1章 Git入门/图1.png" alt="这里写图片描述"></p>
-  <center>图1</center>
+        <p>首先需要明确损失函数与代价函数的区别与联系。在 Coursera：Neural Networks and Deep Learning 课程中，Andrew Ng 给出的解释如下：</p>
+<font face="黑体" size=4 color=#DD0000>The loss function computes the error for a single training example; the cost function is the average of the loss funcitons of the entire training set.</font>
 
-<p>    社交网络式分布模型</p>
-<p><img src="第1章 Git入门/图2.png" alt="这里写图片描述"></p>
-  <center>图2</center>
+<p><strong>损失函数</strong>(Loss function)是定义在单个训练样本的损失/误差，也就是就算一个样本的误差，比如我们想要分类，就是预测的类别和实际类别的区别，是一个样本的哦，用L表示。</p>
+<p><strong>代价函数</strong>(Cost function)是定义在整个训练集整体的误差描述，也就是所有样本的误差的总和的平均，也就是损失函数的总和的平均，有没有这个平均其实不会影响最后的参数的求解结果。</p>
+<p>所以说两个不是一个东西，很多人把它们混为一谈这是不对的。好了，开始今天的正题吧。</p>
+<h2 id="6-1常见的损失函数"><a href="#6-1常见的损失函数" class="headerlink" title="6.1常见的损失函数"></a>6.1常见的损失函数</h2><p>损失函数（loss function）是用来估量你模型的预测值 f(x)与真实值 Y的不一致程度，它是一个非负实值函数,通常使用 来表示，损失函数越小，模型的鲁棒性就越好。损失函数是经验风险函数的核心部分，也是结构风险函数重要组成部分。模型的结构风险函数包括了经验风险项和正则项，通常可以表示成如下式子：</p>
+<script type="math/tex; mode=display">\theta^* = \arg \min_\theta \frac{1}{N}{}\sum_{i=1}^{N} L(y_i, f(x_i; \theta)) + \lambda\  \Phi(\theta)</script><p>其中，前面的均值函数表示的是经验风险函数，$L$代表的是损失函数，后面的Φ是正则化项（regularizer）或者叫惩罚项（penalty term），它可以是$L1$，也可以是$L2$，或者其他的正则函数。整个式子表示的意思是找到使目标函数最小时的θ值。下面主要列出几种常见的损失函数。<br>【注】Object Function（目标函数 ）定义为：Cost Function + 正则化项。目标函数(Objective function)就是有某个（最优化）目标的函数。</p>
+<p><img src="第6章 损失函数与代价函数/t1.png" alt="这里写图片描述"></p>
+<center>图1常见的损失函数</center>
 
-<h3 id="1-1-4-Git基本交互流程图"><a href="#1-1-4-Git基本交互流程图" class="headerlink" title="1.1.4 Git基本交互流程图"></a>1.1.4 Git基本交互流程图</h3><p>  <img src="第1章 Git入门/图3.png" alt="这里写图片描述"></p>
-  <center>图3</center>
+<h3 id="6-1-1-0-1损失函数和绝对值损失函数"><a href="#6-1-1-0-1损失函数和绝对值损失函数" class="headerlink" title="6.1.1 0-1损失函数和绝对值损失函数"></a>6.1.1 0-1损失函数和绝对值损失函数</h3><p>可以看从图1看出，该损失函数的意义就是，当预测错误时，损失函数值为1，预测正确时，损失函数值为0。该损失函数不考虑预测值和真实值的误差程度，也就是只要预测错误，预测错误差一点和差很多是一样的。</p>
+<p><img src="第6章 损失函数与代价函数/tt1.png" alt="这里写图片描述"></p>
+<p>感知机就是用的这种损失函数。但是由于相等这个条件太过严格，因此我们可以放宽条件，即满足$|Y-f(X)|&lt;T$ 时认为相等。</p>
+<p><img src="第6章 损失函数与代价函数/tt2.png" alt="这里写图片描述"></p>
+<p><strong>    绝对值损失函数</strong></p>
+<script type="math/tex; mode=display">L(Y,f(X))=|Y-f(X)|</script><h3 id="6-1-2平方损失函数（Square-Loss）（最小二乘法-Ordinary-Least-Squares-）"><a href="#6-1-2平方损失函数（Square-Loss）（最小二乘法-Ordinary-Least-Squares-）" class="headerlink" title="6.1.2平方损失函数（Square Loss）（最小二乘法, Ordinary Least Squares ）"></a>6.1.2平方损失函数（Square Loss）（最小二乘法, Ordinary Least Squares ）</h3><p>最小二乘法是线性回归的一种，OLS将问题转化成了一个凸优化问题。在线性回归中，它假设样本和噪声都服从高斯分布（为什么假设成高斯分布呢？其实这里隐藏了一个小知识点，就是中心极限定理，可以参考<br><a href="https://en.wikipedia.org/wiki/Central_limit_theorem" target="_blank" rel="noopener">【central limit theorem】</a></p>
+<p>最后通过极大似然估计（MLE）可以推导出最小二乘式子。最小二乘的基本原则是：最优拟合直线应该是使各点到回归直线的距离和最小的直线，即平方和最小。换言之，OLS是基于距离的，而这个距离就是我们用的最多的欧几里得距离。为什么它会选择使用欧式距离作为误差度量呢（即Mean squared error， MSE），主要有以下几个原因：</p>
+<blockquote>
+<p>    简单，计算方便；<br>    欧氏距离是一种很好的相似性度量标准；<br>    在不同的表示域变换后特征性质不变。</p>
+</blockquote>
+<p>平方损失（Square loss）的标准形式如下：</p>
+<script type="math/tex; mode=display">L(Y-f(X))=(Y-f(X))^2</script><h3 id="6-1-3-log对数损失函数（Cross-Entropy-Loss）（逻辑回归与Softmax-分类）"><a href="#6-1-3-log对数损失函数（Cross-Entropy-Loss）（逻辑回归与Softmax-分类）" class="headerlink" title="6.1.3 log对数损失函数（Cross Entropy Loss）（逻辑回归与Softmax 分类）"></a>6.1.3 log对数损失函数（Cross Entropy Loss）（逻辑回归与Softmax 分类）</h3><p>平方损失函数可以通过线性回归在假设样本是高斯分布的条件下推导得到，而逻辑回归得到的并不是平方损失。在逻辑回归的推导中，它假设样本服从伯努利分布（0-1分布），然后求得满足该分布的似然函数，接着取对数求极值等等。而逻辑回归并没有求似然函数的极值，而是把极大化当做是一种思想，进而推导出它的经验风险函数为：最小化负的似然函数（即$max F(y, f(x)) —&gt; min -F(y, f(x)))$。从损失函数的视角来看，它就成了log损失函数了。<br>log损失函数的标准形式：</p>
+<script type="math/tex; mode=display">L(Y,P(Y|X)) = -\log P(Y|X)</script><p>刚刚说到，取对数是为了方便计算极大似然估计，因为在MLE中，直接求导比较困难，所以通常都是先取对数再求导找极值点。损失函数$L(Y, P(Y|X))$表达的是样本$X$在分类$Y$的情况下，使概率$P(Y|X)$达到最大值（换言之，就是利用已知的样本分布，找到最有可能（即最大概率）导致这种分布的参数值；或者说什么样的参数才能使我们观测到目前这组数据的概率最大）。因为log函数是单调递增的，所以$logP(Y|X)$也会达到最大值，因此在前面加上负号之后，最大化$P(Y|X)$就等价于最小化$L$了。</p>
+<p>逻辑回归的$P(Y=y|x)$表达式如下（为了将类别标签$y$统一为1和0，下面将表达式分开表示）：</p>
+<p><img src="第6章 损失函数与代价函数/tt3.png" alt="这里写图片描述"></p>
+<p>将它带入到上式，通过推导可以得到logistic的损失函数表达式，如下：</p>
+<p><img src="第6章 损失函数与代价函数/tt4.png" alt="这里写图片描述"></p>
+<h3 id="6-1-4指数损失函数（Exponential-Loss）（Adaboost）"><a href="#6-1-4指数损失函数（Exponential-Loss）（Adaboost）" class="headerlink" title="6.1.4指数损失函数（Exponential Loss）（Adaboost）"></a>6.1.4指数损失函数（Exponential Loss）（Adaboost）</h3><p>学过Adaboost算法的人都知道，它是前向分步加法算法的特例，是一个加和模型，损失函数就是指数函数。在Adaboost中，经过m此迭代之后，可以得到 $f_m(x)$：</p>
+<p><img src="第6章 损失函数与代价函数/tt5.png" alt="这里写图片描述"></p>
+<p>Adaboost每次迭代时的目的是为了找到最小化下列式子时的参数$α$和$G$：</p>
+<p><img src="第6章 损失函数与代价函数/tt6.png" alt="这里写图片描述"></p>
+<p>而指数损失函数(exp-loss）的标准形式如下：</p>
+<p><img src="第6章 损失函数与代价函数/tt7.png" alt="这里写图片描述"></p>
+<p>关于Adaboost的推导，可以参考Wikipedia：<a href="https://en.wikipedia.org/wiki/AdaBoost" target="_blank" rel="noopener">AdaBoost</a><br>或者《统计学习方法》P145.</p>
+<h3 id="6-1-5铰链损失函数（Hinge-Loss）（SVM）"><a href="#6-1-5铰链损失函数（Hinge-Loss）（SVM）" class="headerlink" title="6.1.5铰链损失函数（Hinge Loss）（SVM）"></a>6.1.5铰链损失函数（Hinge Loss）（SVM）</h3><p>在机器学习算法中，hinge损失函数和SVM是息息相关的。在线性支持向量机中，最优化问题可以等价于下列式子：</p>
+<p><img src="第6章 损失函数与代价函数/tt8.png" alt="这里写图片描述"></p>
+<p>下面来对式子做个变形，令：</p>
+<p><img src="第6章 损失函数与代价函数/tt9.png" alt="这里写图片描述"></p>
+<p>于是，原式就变成了：</p>
+<p><img src="第6章 损失函数与代价函数/tt10.png" alt="这里写图片描述"></p>
+<p>如若取 $\lambda=\frac{1}{2C}$，式子就可以表示成：</p>
+<p> <img src="第6章 损失函数与代价函数/tt11.png" alt="这里写图片描述"></p>
+<p>可以看出，该式子与下式非常相似：</p>
+<p><img src="第6章 损失函数与代价函数/tt12.png" alt="这里写图片描述"></p>
+<p>前半部分中的$l$就是hinge损失函数，而后面相当于$L2$正则项。<br>Hinge 损失函数的标准形式：</p>
+<p><img src="第6章 损失函数与代价函数/tt13.png" alt="这里写图片描述"></p>
+<p>可以看出，当$|y|&gt;=1$时，$L(y)=0$。</p>
+<p>更多内容，参考<a href="https://en.wikipedia.org/wiki/Hinge_loss" target="_blank" rel="noopener">Hinge-loss。</a><br>补充一下：在libsvm中一共有4中核函数可以选择，对应的是-t参数分别是：<br>    线性核；<br>    多项式核；<br>    RBF核；<br>    sigmoid核。</p>
+<p><img src="第6章 损失函数与代价函数/t2.png" alt="这里写图片描述"></p>
+ <center>图2</center>
 
-<p>好了，下面进行安装。</p>
-<h2 id="1-2-Git安装过程"><a href="#1-2-Git安装过程" class="headerlink" title="1.2 Git安装过程"></a>1.2 Git安装过程</h2><p>下载地址：<a href="https://git-scm.com/downloads/" target="_blank" rel="noopener">https://git-scm.com/downloads/</a><br>1.双击安装程序“Git-2.12.0-64-bit”，如图所示。目前（2017-11-07）最新的版本是2.15.0，读者朋友要想使用最新的版本请自行下载。</p>
-<p>  <img src="第1章 Git入门/图4.png" alt="这里写图片描述"></p>
-  <center>图4</center>
+<h2 id="6-2常见的代价函数"><a href="#6-2常见的代价函数" class="headerlink" title="6.2常见的代价函数"></a>6.2常见的代价函数</h2><p>前文介绍了常见的损失函数，接下来介绍常见的代价函数。这是在前文的基础上推到的。</p>
+<h3 id="6-2-1平方代价函数"><a href="#6-2-1平方代价函数" class="headerlink" title="6.2.1平方代价函数"></a>6.2.1平方代价函数</h3><p>当样本个数为n时，此时的代价函数变为：</p>
+<script type="math/tex; mode=display">C(Y,f(X))=   {}\sum_{i=1}^{n} (Y-f(X))^2 $$_
 
-<p>2.点击“Next”，根据自己的情况，选择程序的安装目录。如图所示。</p>
-<p>  <img src="第1章 Git入门/图5.png" alt="这里写图片描述"></p>
-  <center>图5</center>
-
-<p>3.继续点击“Next”，显示截图如下：</p>
-<p> <img src="第1章 Git入门/图6.png" alt="这里写图片描述"></p>
-  <center>图6</center>
-
-<p>说明：<br>（1）图标组件(Addition icons) : 选择是否创建桌面快捷方式。<br>（2）桌面浏览(Windows Explorer integration) : 浏览源码的方法，使用bash 或者 使用Git GUI工具。<br>（3）关联配置文件 : 是否关联 git 配置文件, 该配置文件主要显示文本编辑器的样式。<br>（4）关联shell脚本文件 : 是否关联Bash命令行执行的脚本文件。<br>（5）使用TrueType编码 : 在命令行中是否使用TruthType编码, 该编码是微软和苹果公司制定的通用编码。<br>4.选择完之后，点击“Next”，显示截图如下：</p>
-<p>  <img src="第1章 Git入门/图7.png" alt="这里写图片描述">&lt;</p>
-  <center>图7</center>
-
-<p>开始菜单快捷方式目录：设置开始菜单中快捷方式的目录名称, 也可以选择不在开始菜单中创建快捷方式。<br>5.点击“Next”，显示截图如下：</p>
-<p> <img src="第1章 Git入门/图8.png" alt="这里写图片描述"></p>
-  <center>图8</center>
-
-<p>设置环境变量<br>选择使用什么样的命令行工具，一般情况下我们默认使用Git Bash即可：<br>（1）Git自带：使用Git自带的Git Bash命令行工具。<br>（2）系统自带CMD：使用Windows系统的命令行工具。<br>（3）二者都有：上面二者同时配置，但是注意，这样会将windows中的find.exe 和 sort.exe工具覆盖，如果不懂这些尽量不要选择。<br>6.选择之后，继续点击“Next”，显示如下：</p>
-<p> <img src="第1章 Git入门/图9.png" alt="这里写图片描述"></p>
-  <center>图9</center>
-
-<p> 7.选择之后，点击“Next”，显示截图如下：</p>
-<p><img src="第1章 Git入门/图10.png" alt="这里写图片描述"></p>
-<center>图10</center>
-
-<p>8.选择之后，点击“Next”，显示截图如下：</p>
-<p>  <img src="第1章 Git入门/图11.png" alt="这里写图片描述"></p>
-  <center>图11</center>
-
-<p>选择提交的时候换行格式<br>（1）检查出windows格式转换为unix格式：将windows格式的换行转为unix格式的换行再进行提交。<br>（2）检查出原来格式转为unix格式：不管什么格式的，一律转为unix格式的换行再进行提交。<br>（3）不进行格式转换 : 不进行转换，检查出什么，就提交什么。<br>9.选择之后，点击“Next”，显示截图如下：</p>
-<p>  <img src="第1章 Git入门/图12.png" alt="这里写图片描述"></p>
-  <center>图12</center>
-
-<p>10.选择之后，点击“Install”，开始安装，截图显示如下：</p>
-<p> <img src="第1章 Git入门/图13.png" alt="这里写图片描述"></p>
-  <center>图13</center>
-
-<p>11.安装完成之后，显示截图如下：</p>
-<p> <img src="第1章 Git入门/图14.png" alt="这里写图片描述"></p>
-  <center>图14</center>
-
-<p>这样，我们的Git客户端就下载并安装完成了。<br>Git英文手册在安装目录下：C:\Program Files\Git<br>【注】具体英文手册的路径根据安装路径决定，请读者根据自己的实际安装路径查找手册。</p>
-<h2 id="1-3-Git-Bash配置"><a href="#1-3-Git-Bash配置" class="headerlink" title="1.3 Git Bash配置"></a>1.3 Git Bash配置</h2><p>1.从开始菜单中找到Git Bash，点击打开之后，显示如下：</p>
-<p> <img src="第1章 Git入门/图15.png" alt="这里写图片描述"></p>
-  <center>图15</center>
-
-<p>2.点击左上角的图标，在下拉菜单中选择“Options…”，点击之后会弹出Git Bash的配置界面，可以根据自己的需要进行配置，操作过程截图如下：</p>
-<p>  <img src="第1章 Git入门/图16.png" alt="这里写图片描述"></p>
-  <center>图16</center>
-
+$Y-f(X)$表示的是残差，整个式子表示的是残差的平方和，而我们的目的就是最小化这个目标函数值（注：该式子未加入正则项），也就是最小化残差的平方和（residual sum of squares，RSS）。
+而在实际应用中，通常会使用均方差（MSE）作为一项衡量指标，公式如下：
+ $$MSE = \frac{1}{n} \sum_{i=1} ^{n} (\tilde{Y_i} - Y_i )^2</script><p>上面提到了线性回归，这里额外补充一句，我们通常说的线性有两种情况，一种是因变量$y$是自变量$x$的线性函数，一种是因变量$y$是参数$α$的线性函数。在机器学习中，通常指的都是后一种情况。</p>
+<h3 id="6-2-2-log对数代价函数"><a href="#6-2-2-log对数代价函数" class="headerlink" title="6.2.2 log对数代价函数"></a>6.2.2 log对数代价函数</h3><p>逻辑回归最后得到的目标式子如下：</p>
+<script type="math/tex; mode=display">J(\theta) = - \frac{1}{m} \sum_{i=1}^m \left [ y^{(i)} \log h_{\theta}(x^{(i)}) + (1-y^{(i)}) \log(1-h_{\theta}(x^{(i)}))  \right ]</script><p>上面是针对二分类而言的。这里需要解释一下：之所以有人认为逻辑回归是平方损失，是因为在使用梯度下降来求最优解的时候，它的迭代式子与平方损失求导后的式子非常相似，从而给人一种直观上的错觉。</p>
+<h3 id="6-2-3指数代价函数（Adaboost）"><a href="#6-2-3指数代价函数（Adaboost）" class="headerlink" title="6.2.3指数代价函数（Adaboost）"></a>6.2.3指数代价函数（Adaboost）</h3><p>Adaboost的目标式子就是指数损失，在给定￥n$个样本的情况下，Adaboost的损失函数为：</p>
+<script type="math/tex; mode=display">C(y,f(x)) = \frac{1}{n} \sum_{i=1} ^{n} exp[-y_if(x_i)]</script><h3 id="6-2-4铰链代价函数（Hinge-Loss）"><a href="#6-2-4铰链代价函数（Hinge-Loss）" class="headerlink" title="6.2.4铰链代价函数（Hinge Loss）"></a>6.2.4铰链代价函数（Hinge Loss）</h3><p>铰链损失函数的代价函数如下：</p>
+<p><img src="第6章 损失函数与代价函数/tt14.png" alt="这里写图片描述"></p>
 
       
     </div>
@@ -580,9 +576,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"># git</a>
-          
-            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+            <a href="/tags/TensorFlow/" rel="tag"># TensorFlow</a>
           
         </div>
       
@@ -595,8 +589,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" rel="next" title="《Git与Github使用笔记》第2章 Git命令的基本操作">
-                <i class="fa fa-chevron-left"></i> 《Git与Github使用笔记》第2章 Git命令的基本操作
+              <a href="/2020/04/18/Git/%E7%AC%AC9%E7%AB%A0%20GitHub%E5%88%9B%E5%BB%BA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2/" rel="next" title="《Git与Github使用笔记》第9章 GitHub创建静态页面">
+                <i class="fa fa-chevron-left"></i> 《Git与Github使用笔记》第9章 GitHub创建静态页面
               </a>
             
           </div>
@@ -604,10 +598,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/04/18/Git/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/" rel="prev" title="《Git与Github使用笔记》第3章 Git相关配置">
-                《Git与Github使用笔记》第3章 Git相关配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -790,7 +780,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Git介绍"><span class="nav-number">1.</span> <span class="nav-text">1.1 Git介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-Git-简介"><span class="nav-number">1.1.</span> <span class="nav-text">1.1.1 Git 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-Git的优势"><span class="nav-number">1.2.</span> <span class="nav-text">1.1.2 Git的优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-Git的工作模型"><span class="nav-number">1.3.</span> <span class="nav-text">1.1.3 Git的工作模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-4-Git基本交互流程图"><span class="nav-number">1.4.</span> <span class="nav-text">1.1.4 Git基本交互流程图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Git安装过程"><span class="nav-number">2.</span> <span class="nav-text">1.2 Git安装过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Git-Bash配置"><span class="nav-number">3.</span> <span class="nav-text">1.3 Git Bash配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1常见的损失函数"><span class="nav-number">1.</span> <span class="nav-text">6.1常见的损失函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-1-0-1损失函数和绝对值损失函数"><span class="nav-number">1.1.</span> <span class="nav-text">6.1.1 0-1损失函数和绝对值损失函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-2平方损失函数（Square-Loss）（最小二乘法-Ordinary-Least-Squares-）"><span class="nav-number">1.2.</span> <span class="nav-text">6.1.2平方损失函数（Square Loss）（最小二乘法, Ordinary Least Squares ）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-3-log对数损失函数（Cross-Entropy-Loss）（逻辑回归与Softmax-分类）"><span class="nav-number">1.3.</span> <span class="nav-text">6.1.3 log对数损失函数（Cross Entropy Loss）（逻辑回归与Softmax 分类）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-4指数损失函数（Exponential-Loss）（Adaboost）"><span class="nav-number">1.4.</span> <span class="nav-text">6.1.4指数损失函数（Exponential Loss）（Adaboost）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-5铰链损失函数（Hinge-Loss）（SVM）"><span class="nav-number">1.5.</span> <span class="nav-text">6.1.5铰链损失函数（Hinge Loss）（SVM）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2常见的代价函数"><span class="nav-number">2.</span> <span class="nav-text">6.2常见的代价函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-1平方代价函数"><span class="nav-number">2.1.</span> <span class="nav-text">6.2.1平方代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-2-log对数代价函数"><span class="nav-number">2.2.</span> <span class="nav-text">6.2.2 log对数代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-3指数代价函数（Adaboost）"><span class="nav-number">2.3.</span> <span class="nav-text">6.2.3指数代价函数（Adaboost）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-4铰链代价函数（Hinge-Loss）"><span class="nav-number">2.4.</span> <span class="nav-text">6.2.4铰链代价函数（Hinge Loss）</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1353,6 +1343,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

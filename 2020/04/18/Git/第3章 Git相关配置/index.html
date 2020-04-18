@@ -129,19 +129,27 @@
 
 
 
-<meta name="description" content="![这里写图片描述](第3章 Git相关配置&#x2F;图1.png) 图1工作区、版本库、暂存区的关系图      查看文件记录命令：git log – pretty&#x3D;raw进入Ouxiaolong的Git Bash： ![这里写图片描述](第3章 Git相关配置&#x2F;图2.png) 图2      查看对象命令：git cat-file -t 哈希值（一般写前6位即可） ![这里写图片描述](第3章 G">
+<meta name="description" content="图1工作区、版本库、暂存区的关系图      查看文件记录命令：git log – pretty&#x3D;raw进入Ouxiaolong的Git Bash：  图2      查看对象命令：git cat-file -t 哈希值（一般写前6位即可）  图3      查看对象的内容命令：git cat-file -p 哈希值（一般写前6位即可）  图4  一级一级追溯，最终追溯到文件的内容。  图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《Git与Github使用笔记》第3章 Git相关配置">
 <meta property="og:url" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="BruceOu的博客">
-<meta property="og:description" content="![这里写图片描述](第3章 Git相关配置&#x2F;图1.png) 图1工作区、版本库、暂存区的关系图      查看文件记录命令：git log – pretty&#x3D;raw进入Ouxiaolong的Git Bash： ![这里写图片描述](第3章 Git相关配置&#x2F;图2.png) 图2      查看对象命令：git cat-file -t 哈希值（一般写前6位即可） ![这里写图片描述](第3章 G">
+<meta property="og:description" content="图1工作区、版本库、暂存区的关系图      查看文件记录命令：git log – pretty&#x3D;raw进入Ouxiaolong的Git Bash：  图2      查看对象命令：git cat-file -t 哈希值（一般写前6位即可）  图3      查看对象的内容命令：git cat-file -p 哈希值（一般写前6位即可）  图4  一级一级追溯，最终追溯到文件的内容。  图">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E5%9B%BE1.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E5%9B%BE2.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E5%9B%BE3.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E5%9B%BE4.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E5%9B%BE5.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E5%9B%BE6.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E5%9B%BE7.png">
 <meta property="article:published_time" content="2020-04-18T05:37:07.347Z">
 <meta property="article:modified_time" content="2018-12-18T06:33:16.629Z">
 <meta property="article:author" content="BruceOu">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="GitHub">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E7%AC%AC3%E7%AB%A0%20Git%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/%E5%9B%BE1.png">
 
 
 
@@ -442,33 +450,34 @@
       
 
       
-        <p>![这里写图片描述](第3章 Git相关配置/图1.png)</p>
+        <p><img src="第3章 Git相关配置/图1.png" alt="这里写图片描述"></p>
 <center>图1工作区、版本库、暂存区的关系图</center>
 
 <p><font size=4 color=#DD0000  face="黑体">    查看文件记录</font><br>命令：git log – pretty=raw<br>进入Ouxiaolong的Git Bash：</p>
-<p>![这里写图片描述](第3章 Git相关配置/图2.png)</p>
+<p><img src="第3章 Git相关配置/图2.png" alt="这里写图片描述"></p>
 <center>图2</center>
 
 <p><font size=4 color=#DD0000  face="黑体">    查看对象</font><br>命令：git cat-file -t 哈希值（一般写前6位即可）</p>
-<p>![这里写图片描述](第3章 Git相关配置/图3.png)</p>
+<p><img src="第3章 Git相关配置/图3.png" alt="这里写图片描述"></p>
 <center>图3</center>
 
 <p><font size=4 color=#DD0000  face="黑体">    查看对象的内容</font><br>命令：git cat-file -p 哈希值（一般写前6位即可）</p>
-<p>![这里写图片描述](第3章 Git相关配置/图4.png)</p>
+<p><img src="第3章 Git相关配置/图4.png" alt="这里写图片描述"></p>
 <center>图4</center>
 
 <p>一级一级追溯，最终追溯到文件的内容。</p>
-<p>![这里写图片描述](第3章 Git相关配置/图5.png)</p>
+<p><img src="第3章 Git相关配置/图5.png" alt="这里写图片描述"></p>
 <center>图5</center>
 
 <p>进入用户Bruceou的Git Bash：</p>
-<p>![这里写图片描述](第3章 Git相关配置/图6.png)</p>
+<p><img src="第3章 Git相关配置/图6.png" alt="这里写图片描述"></p>
 <center>图6</center>
 
-<p>![这里写图片描述](第3章 Git相关配置/图7.png)</p>
+<p><img src="第3章 Git相关配置/图7.png" alt="这里写图片描述"></p>
 <center>图7</center>
 
-<p><font size=4 color=#DD0000  face="黑体">    比较不同</font><br>命令：git diff<br>git diff –staged //比较workspace VS staged<br>git diff –cached //staged VS local repo<br><font size=4 color=#DD0000  face="黑体">    查看分支及创建分支</font><br>命令：git branch<br>命令：git branch 分支名 //创建分支<br>命令：git checkout 分支名 //切换分支命令</p>
+<p><font size=4 color=#DD0000  face="黑体">    比较不同</font><br>命令：git diff<br>git diff –staged //比较workspace VS staged<br>git diff –cached //staged VS local repo</p>
+<p><font size=4 color=#DD0000  face="黑体">    查看分支及创建分支</font><br>命令：git branch<br>命令：git branch 分支名 //创建分支<br>命令：git checkout 分支名 //切换分支命令</p>
 
       
     </div>
@@ -627,7 +636,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -638,7 +647,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -649,7 +658,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

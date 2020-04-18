@@ -136,11 +136,15 @@
 <meta property="og:site_name" content="BruceOu的博客">
 <meta property="og:description" content="在 hexo 中，你会发现我们不能用 Latex 语法来书写数学公式，这对于书写学术博客来说是很大的不便，因为我们会经常碰到很多的数学公式推导，但是我们可以通过安装第三方库来解决这一问题。 第一步： 使用Kramed代替 Marked hexo 默认的渲染引擎是 marked，但是 marked 不支持 mathjax。 kramed 是在 marked 的基础上进行修改。我们在工程目录下执行以下">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Hexo/%E7%AC%AC6%E7%AB%A0%20Hexo%20%E4%B8%AD%E6%94%AF%E6%8C%81%20Mathjax/%E7%AC%AC6%E7%AB%A0%20Hexo%20%E4%B8%AD%E6%94%AF%E6%8C%81%20Mathjax/tt1.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Hexo/%E7%AC%AC6%E7%AB%A0%20Hexo%20%E4%B8%AD%E6%94%AF%E6%8C%81%20Mathjax/%E7%AC%AC6%E7%AB%A0%20Hexo%20%E4%B8%AD%E6%94%AF%E6%8C%81%20Mathjax/tt2.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Hexo/%E7%AC%AC6%E7%AB%A0%20Hexo%20%E4%B8%AD%E6%94%AF%E6%8C%81%20Mathjax/%E7%AC%AC6%E7%AB%A0%20Hexo%20%E4%B8%AD%E6%94%AF%E6%8C%81%20Mathjax/tt3.png">
 <meta property="article:published_time" content="2020-04-18T05:35:46.984Z">
 <meta property="article:modified_time" content="2018-12-20T00:47:46.985Z">
 <meta property="article:author" content="BruceOu">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/18/Hexo/%E7%AC%AC6%E7%AB%A0%20Hexo%20%E4%B8%AD%E6%94%AF%E6%8C%81%20Mathjax/%E7%AC%AC6%E7%AB%A0%20Hexo%20%E4%B8%AD%E6%94%AF%E6%8C%81%20Mathjax/tt1.png">
 
 
 
@@ -443,34 +447,16 @@
       
         <p>在 hexo 中，你会发现我们不能用 Latex 语法来书写数学公式，这对于书写学术博客来说是很大的不便，因为我们会经常碰到很多的数学公式推导，但是我们可以通过安装第三方库来解决这一问题。</p>
 <p><strong>第一步： 使用Kramed代替 Marked</strong></p>
-<p>hexo 默认的渲染引擎是 marked，但是 marked 不支持 mathjax。 kramed 是在 marked 的基础上进行修改。我们在工程目录下执行以下命令来安装 kramed.<br>npm uninstall hexo-renderer-marked –save<br>npm install hexo-renderer-kramed –save</p>
-<p>然后，更改/node_modules/hexo-renderer-kramed/lib/renderer.js，更改：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.replace(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">'$$$$$1$$$$'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>为：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>![在这里插入图片描述](第6章 Hexo 中支持 Mathjax/tt1.png)</p>
-<p><strong>第二步: 停止使用 hexo-math</strong><br>首先，如果你已经安装 hexo-math, 请卸载它：<br>npm uninstall hexo-math –save</p>
-<p>然后安装 hexo-renderer-mathjax 包：<br>npm install hexo-renderer-mathjax –save</p>
-<p><strong>第三步: 更新 Mathjax 的 CDN 链接</strong><br>首先，打开/node_modules/hexo-renderer-mathjax/mathjax.html<br>然后，把<script>更改为：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>第四步: 更改默认转义规则</strong><br>因为 hexo 默认的转义规则会将一些字符进行转义，比如 _ 转为 <em>, 所以我们需要对默认的规则进行修改.<br>首先， 打开node_modules\kramed\lib\rules\inline.js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
-<p>更改为:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()# +\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
-<p>把</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure>
-<p>更改为:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure>
-<p> ![在这里插入图片描述](第6章 Hexo 中支持 Mathjax/tt2.png)</p>
-<p><strong>第五步: 开启mathjax</strong><br>在主题 _config.yml 中开启 Mathjax， 找到 mathjax 字段添加如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mathjax:</span><br><span class="line">    enable: true</span><br></pre></td></tr></table></figure>
-
-<p> ![在这里插入图片描述](第6章 Hexo 中支持 Mathjax/tt3.png)</p>
-<p>这一步可选，在博客中开启 Mathjax，， 添加以下内容：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Testing Mathjax with Hexo</span><br><span class="line">category: Uncategorized</span><br><span class="line">date: 2017/05/03</span><br><span class="line">mathjax: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>通过以上步骤，我们就可以在 hexo 中使用 Mathjax 来书写数学公式。</p>
+<p>hexo 默认的渲染引擎是 marked，但是 marked 不支持 mathjax。 kramed 是在 marked 的基础上进行修改。我们在工程目录下执行以下命令来安装 kramed.<br>npm uninstall hexo-renderer-marked —save<br>npm install hexo-renderer-kramed —save</p>
+<p>然后，更改/node_modules/hexo-renderer-kramed/lib/renderer.js，更改：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.replace(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">'$$$$$1$$$$'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>为：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="第6章 Hexo 中支持 Mathjax/tt1.png" alt="在这里插入图片描述"></p>
+<p><strong>第二步: 停止使用 hexo-math</strong><br>首先，如果你已经安装 hexo-math, 请卸载它：<br>npm uninstall hexo-math —save</p>
+<p>然后安装 hexo-renderer-mathjax 包：<br>npm install hexo-renderer-mathjax —save</p>
+<p><strong>第三步: 更新 Mathjax 的 CDN 链接</strong><br>首先，打开/node_modules/hexo-renderer-mathjax/mathjax.html<br>然后，把<script>更改为：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>第四步: 更改默认转义规则</strong><br>因为 hexo 默认的转义规则会将一些字符进行转义，比如 _ 转为 <em>, 所以我们需要对默认的规则进行修改.<br>首先， 打开node_modules\kramed\lib\rules\inline.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure><br>更改为:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()# +\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure><br>把<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure><br>更改为:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure><br> <img src="第6章 Hexo 中支持 Mathjax/tt2.png" alt="在这里插入图片描述"></p>
+<p><strong>第五步: 开启mathjax</strong><br>在主题 _config.yml 中开启 Mathjax， 找到 mathjax 字段添加如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mathjax:</span><br><span class="line">    enable: true</span><br></pre></td></tr></table></figure></p>
+<p> <img src="第6章 Hexo 中支持 Mathjax/tt3.png" alt="在这里插入图片描述"></p>
+<p>这一步可选，在博客中开启 Mathjax，， 添加以下内容：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Testing Mathjax with Hexo</span><br><span class="line">category: Uncategorized</span><br><span class="line">date: 2017/05/03</span><br><span class="line">mathjax: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure><br>通过以上步骤，我们就可以在 hexo 中使用 Mathjax 来书写数学公式。</p>
 
       
     </div>
@@ -627,7 +613,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -638,7 +624,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -649,7 +635,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

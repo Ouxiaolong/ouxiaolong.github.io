@@ -129,19 +129,38 @@
 
 
 
-<meta name="description" content="第一步：仓库初始化在Repository&#x2F;Git目录下点击右键-&gt;Git Bash Here ![这里写图片描述](第2章 Git命令的基本操作&#x2F;图1.png) 图1  进入Git Bash命令：git init –bare shared.git  ![这里写图片描述](第2章 Git命令的基本操作&#x2F;图2.png)   图2  如图表明初始化成功。 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;">
+<meta name="description" content="第一步：仓库初始化在Repository&#x2F;Git目录下点击右键-&gt;Git Bash Here  图1  进入Git Bash命令：git init —bare shared.git     图2  如图表明初始化成功。 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;开发人员1操作&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 第二步：复制仓库到本地命">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《Git与Github使用笔记》第2章 Git命令的基本操作">
 <meta property="og:url" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="BruceOu的博客">
-<meta property="og:description" content="第一步：仓库初始化在Repository&#x2F;Git目录下点击右键-&gt;Git Bash Here ![这里写图片描述](第2章 Git命令的基本操作&#x2F;图1.png) 图1  进入Git Bash命令：git init –bare shared.git  ![这里写图片描述](第2章 Git命令的基本操作&#x2F;图2.png)   图2  如图表明初始化成功。 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;">
+<meta property="og:description" content="第一步：仓库初始化在Repository&#x2F;Git目录下点击右键-&gt;Git Bash Here  图1  进入Git Bash命令：git init —bare shared.git     图2  如图表明初始化成功。 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;开发人员1操作&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 第二步：复制仓库到本地命">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE1.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE2.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE3.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE4.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE5.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE6.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE7.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE8.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE9.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE10.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE11.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE12.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE13.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE14.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE15.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE16.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE17.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE18.png">
 <meta property="article:published_time" content="2020-04-18T05:37:07.346Z">
 <meta property="article:modified_time" content="2018-12-18T06:32:14.766Z">
 <meta property="article:author" content="BruceOu">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="GitHub">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/18/Git/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E7%AC%AC2%E7%AB%A0%20Git%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/%E5%9B%BE1.png">
 
 
 
@@ -443,82 +462,85 @@
 
       
         <p><font face="黑体" size=4 color=#DD0000>第一步：仓库初始化</font><br>在Repository/Git目录下点击右键-&gt;Git Bash Here</p>
-<p>![这里写图片描述](第2章 Git命令的基本操作/图1.png)</p>
+<p><img src="第2章 Git命令的基本操作/图1.png" alt="这里写图片描述"></p>
 <center>图1</center>
 
-<p>进入Git Bash<br>命令：git init –bare shared.git</p>
-<p> ![这里写图片描述](第2章 Git命令的基本操作/图2.png)</p>
+<p>进入Git Bash<br>命令：git init —bare shared.git</p>
+<p> <img src="第2章 Git命令的基本操作/图2.png" alt="这里写图片描述"></p>
   <center>图2</center>
 
 <p>如图表明初始化成功。</p>
-<p>===================================开发人员1操作================================<br><font face="黑体" size=4 color=#DD0000>第二步：复制仓库到本地</font><br>命令：git clone /D/Git/Git/Repository/Git/shared.git . (注意有个点，表明当前目录)</p>
-<p> ![这里写图片描述](第2章 Git命令的基本操作/图3.png)</p>
+<p>===================================开发人员1操作================================</p>
+<p><font face="黑体" size=4 color=#DD0000>第二步：复制仓库到本地</font><br>命令：git clone /D/Git/Git/Repository/Git/shared.git . (注意有个点，表明当前目录)</p>
+<p> <img src="第2章 Git命令的基本操作/图3.png" alt="这里写图片描述"></p>
   <center>图3</center>
 
-<p><font face="黑体" size=4 color=#DD0000>第三步：设置个人信息</font><br>git config：<br>    –system：操作/etc/gitconfig文件：包含了适用于系统所有用户和所有库的值。<br>    –global：操作~/.git config文件：具体到你的用户<br>    缺省：操作仓库.git/config文件<br>命令：<br>git config user.name “user1”//用户名<br>git config user.email <a href="mailto:user1@163.com">user1@163.com</a>//用户邮箱</p>
-<p>  ![这里写图片描述](第2章 Git命令的基本操作/图4.png)</p>
+<p><font face="黑体" size=4 color=#DD0000>第三步：设置个人信息</font><br>git config：<br>    —system：操作/etc/gitconfig文件：包含了适用于系统所有用户和所有库的值。<br>    —global：操作~/.git config文件：具体到你的用户<br>    缺省：操作仓库.git/config文件<br>命令：<br>git config user.name “user1”//用户名<br>git config user.email user1@163.com//用户邮箱</p>
+<p>  <img src="第2章 Git命令的基本操作/图4.png" alt="这里写图片描述"></p>
   <center>图4</center>
 
 <p>用ls –al命令可以看到隐藏文件。如下图所示。</p>
-<p> ![这里写图片描述](第2章 Git命令的基本操作/图5.png)</p>
+<p> <img src="第2章 Git命令的基本操作/图5.png" alt="这里写图片描述"></p>
   <center>图5</center>
 
 <p>进入.git文件夹，查看配置文件。<br>命令：cat congfig</p>
-<p>  ![这里写图片描述](第2章 Git命令的基本操作/图6.png)</p>
+<p>  <img src="第2章 Git命令的基本操作/图6.png" alt="这里写图片描述"></p>
   <center>图6</center>
 
 <p><font face="黑体" size=4 color=#DD0000>第四步：忽略无需版本控制的文档</font><br>命令：echo “*.txt” &gt; .gitignore</p>
 <p><font face="黑体" size=4 color=#DD0000>第五步：新建一个文件</font><br>命令：echo “User1 add content” &gt; index.txt</p>
-<p>![这里写图片描述](第2章 Git命令的基本操作/图7.png)</p>
+<p><img src="第2章 Git命令的基本操作/图7.png" alt="这里写图片描述"></p>
   <center>图7</center>
 
 <p>查看是否添加成功。</p>
-<p>![这里写图片描述](第2章 Git命令的基本操作/图8.png)</p>
+<p><img src="第2章 Git命令的基本操作/图8.png" alt="这里写图片描述"></p>
   <center>图8</center>
 
 <p><font face="黑体" size=4 color=#DD0000>第六步：提交文件</font><br>命令：<br>git add index.txt</p>
-<p>  ![这里写图片描述](第2章 Git命令的基本操作/图9.png)</p>
+<p>  <img src="第2章 Git命令的基本操作/图9.png" alt="这里写图片描述"></p>
   <center>图9</center>
 
 <p>命令：git commit </p>
-<p> ![这里写图片描述](第2章 Git命令的基本操作/图10.png)</p>
+<p> <img src="第2章 Git命令的基本操作/图10.png" alt="这里写图片描述"></p>
   <center>图10</center>
 
 <p>命令：首行添加：Bruceou add the file<br>保存退出，如下图表示成功。</p>
-<p>  ![这里写图片描述](第2章 Git命令的基本操作/图11.png)</p>
+<p>  <img src="第2章 Git命令的基本操作/图11.png" alt="这里写图片描述"></p>
 <center>图11</center>
 
 <p><font face="黑体" size=4 color=#DD0000>第七步：把自己的仓库提交到公共服务器</font><br>命令：git push origin master</p>
-<p>  ![这里写图片描述](第2章 Git命令的基本操作/图12.png)</p>
+<p>  <img src="第2章 Git命令的基本操作/图12.png" alt="这里写图片描述"></p>
 <center>图12</center>
 
-<p>=================================开发人员2操作==================================<br><font face="黑体" size=4 color=#DD0000>第八步：复制仓库到本地</font><br>命令：git clone /D/Git/Git/Repository/Git/shared.git .//本地克隆<br>命令：git clone <a href="mailto:git@github.com">git@github.com</a>:Ouxiaolong/Smart_Home.git  //远程克隆</p>
-<p>  ![这里写图片描述](第2章 Git命令的基本操作/图13.png)</p>
+<p>=================================开发人员2操作==================================</p>
+<p><font face="黑体" size=4 color=#DD0000>第八步：复制仓库到本地</font><br>命令：git clone /D/Git/Git/Repository/Git/shared.git .//本地克隆<br>命令：git clone git@github.com:Ouxiaolong/Smart_Home.git  //远程克隆</p>
+<p>  <img src="第2章 Git命令的基本操作/图13.png" alt="这里写图片描述"></p>
 <center>图13</center>
 
-<p><font face="黑体" size=4 color=#DD0000>第九步：设置个人信息</font><br>命令：<br>git config user.name “user2”<br>git config user.email <a href="mailto:user2@163.com">user2@163.com</a></p>
-<p> ![这里写图片描述](第2章 Git命令的基本操作/图14.png)</p>
+<p><font face="黑体" size=4 color=#DD0000>第九步：设置个人信息</font><br>命令：<br>git config user.name “user2”<br>git config user.email user2@163.com</p>
+<p> <img src="第2章 Git命令的基本操作/图14.png" alt="这里写图片描述"></p>
 <center>图14</center>
 
 <p><font face="黑体" size=4 color=#DD0000>第十步：忽略无需版本控制的文档</font><br>命令：echo “*.txt” &gt; .gitignore</p>
 <p><font face="黑体" size=4 color=#DD0000>第十一步：新建一个文件</font><br>命令：echo “User2 add content” &gt;&gt; index.txt</p>
-<p>  ![这里写图片描述](第2章 Git命令的基本操作/图15.png)</p>
+<p>  <img src="第2章 Git命令的基本操作/图15.png" alt="这里写图片描述"></p>
 <center>图15</center>
 
 <p><font face="黑体" size=4 color=#DD0000>第十二步：提交文件</font><br>命令：git add index.txt</p>
-<p>  ![这里写图片描述](第2章 Git命令的基本操作/图16.png)</p>
+<p>  <img src="第2章 Git命令的基本操作/图16.png" alt="这里写图片描述"></p>
 <center>图16</center>
 
 <p>命令：git commit -m “Ouxiaolong add the file!”</p>
-<p> ![这里写图片描述](第2章 Git命令的基本操作/图17.png)</p>
+<p> <img src="第2章 Git命令的基本操作/图17.png" alt="这里写图片描述"></p>
 <center>图17</center>
 
 <p><font face="黑体" size=4 color=#DD0000>第十三步：把自己的仓库提交到公共服务器</font><br>命令：git push origin master</p>
-<p>![这里写图片描述](第2章 Git命令的基本操作/图18.png)</p>
+<p><img src="第2章 Git命令的基本操作/图18.png" alt="这里写图片描述"></p>
 <center>图18</center>
 
 <p>查看状态：<br>命令：git status</p>
-<p>=================================开发人员1操作==================================<br><font face="黑体" size=4 color=#DD0000>第十四步：下载服务器最新数据</font><br>git pull</p>
+<p>=================================开发人员1操作==================================</p>
+<p><font face="黑体" size=4 color=#DD0000>第十四步：下载服务器最新数据</font><br>git pull</p>
 
       
     </div>
@@ -677,7 +699,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -688,7 +710,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -699,7 +721,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
